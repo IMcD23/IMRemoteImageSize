@@ -55,31 +55,23 @@ private class ImageSizeFetcher: NSObject, NSURLSessionDelegate, NSURLSessionData
                 
                 dataTask.cancel()
                 
-                if self.completion != nil {
-                    
-                    completion!(size: size)
-                    self.completion = nil
-                    return
-                }
-                
+                completion?(size: size)
+                completion = nil
+                return
             }
         }
         
         // image didnt match any types
-        if self.completion != nil {
-            completion!(size: CGSizeZero)
-            self.completion = nil
-        }
+        completion?(size: CGSizeZero)
+        completion = nil
         
     }
     
     @objc func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?) {
-        if error != nil && self.completion != nil {
-            completion!(size: CGSizeZero)
-            self.completion = nil
-        }
+        completion?(size: CGSizeZero)
+        completion = nil
     }
-
+    
 }
 
 private protocol ImageType: class {
