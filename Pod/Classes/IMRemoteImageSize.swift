@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     
     static func getImageSize(url: NSURL, completion: (size: CGSize) -> Void) {
         ImageSizeFetcher(url: url, completion: completion).fetch()

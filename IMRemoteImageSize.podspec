@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "IMRemoteImageSize"
-  s.version          = "1.0"
+  s.version          = "1.0.1"
   s.summary          = "a library for iOS that allows you to retrieve the size of a remote image without having to download it."
 
 # This description is used to generate tags and improve search results.

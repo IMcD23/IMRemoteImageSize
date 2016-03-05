@@ -11,6 +11,8 @@ IMRemoteImageSize is a simple library for iOS that allows you to retrieve the di
 
 IMRemoteImageSize runs as an extension of UIImage. To retrieve the size of a remote image, all you have to do is the following:
 
+At the top of your Swift file, add `import IMRemoteImageSize`, then add this code to get the size of an image:
+
     let url = NSURL(...) // image url
     UIImage.getImageSize(url, completion: { (size) -> Void in
         print("Got size of image: \(url): \(size)")
