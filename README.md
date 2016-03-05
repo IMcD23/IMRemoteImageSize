@@ -1,15 +1,28 @@
 # IMRemoteImageSize
 
-[![CI Status](http://img.shields.io/travis/Ian McDowell/IMRemoteImageSize.svg?style=flat)](https://travis-ci.org/Ian McDowell/IMRemoteImageSize)
+[![CI Status](http://img.shields.io/travis/IMcD23/IMRemoteImageSize.svg?style=flat)](https://travis-ci.org/IMcD23/IMRemoteImageSize)
 [![Version](https://img.shields.io/cocoapods/v/IMRemoteImageSize.svg?style=flat)](http://cocoapods.org/pods/IMRemoteImageSize)
 [![License](https://img.shields.io/cocoapods/l/IMRemoteImageSize.svg?style=flat)](http://cocoapods.org/pods/IMRemoteImageSize)
 [![Platform](https://img.shields.io/cocoapods/p/IMRemoteImageSize.svg?style=flat)](http://cocoapods.org/pods/IMRemoteImageSize)
 
+IMRemoteImageSize is a simple library for iOS that allows you to retrieve the dimensions of a remote image (JPG, GIF, PNG or BMP), without having to download the image. It retrieves the first few bytes of the file and then stops downloading.
+
 ## Usage
+
+IMRemoteImageSize runs as an extension of UIImage. To retrieve the size of a remote image, all you have to do is the following:
+
+    let url = NSURL(...) // image url
+    UIImage.getImageSize(url, completion: { (size) -> Void in
+        print("Got size of image: \(url): \(size)")
+    })
+
+If the size was unable to be determined by the library, it will return CGSizeZero.
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+Written in Swift 2.0, so it requires at least Xcode 7. Compatible with iOS 8.3 and above.
 
 ## Installation
 
@@ -22,7 +35,7 @@ pod "IMRemoteImageSize"
 
 ## Author
 
-Ian McDowell, ian@ianmcdowell.net
+Ian McDowell, mcdow.ian@gmail.com
 
 ## License
 

@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "IMRemoteImageSize"
-  s.version          = "0.1.0"
-  s.summary          = "A short description of IMRemoteImageSize."
+  s.version          = "1.0"
+  s.summary          = "a library for iOS that allows you to retrieve the size of a remote image without having to download it."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,16 +17,17 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
+IMRemoteImageSize is a simple library for iOS that allows you to retrieve the dimensions of a remote image (JPG, GIF, PNG or BMP), without having to download the image. It retrieves the first few bytes of the file and then stops downloading.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/IMRemoteImageSize"
+  s.homepage         = "https://github.com/IMcD23/IMRemoteImageSize"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
-  s.author           = { "Ian McDowell" => "ian@ianmcdowell.net" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/IMRemoteImageSize.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { "Ian McDowell" => "mcdow.ian@gmail.com" }
+  s.source           = { :git => "https://github.com/IMcD23/IMRemoteImageSize.git", :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/ian_mcdowell'
 
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '8.3'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'

@@ -1,0 +1,14 @@
+PODS:
+  - IMRemoteImageSize (0.1.0)
+
+DEPENDENCIES:
+  - IMRemoteImageSize (from `../`)
+
+EXTERNAL SOURCES:
+  IMRemoteImageSize:
+    :path: ../
+
+SPEC CHECKSUMS:
+  IMRemoteImageSize: 4c6cc899bc9f7c2a14f67417d1243f591c22b1fc
+
+COCOAPODS: 0.39.0
